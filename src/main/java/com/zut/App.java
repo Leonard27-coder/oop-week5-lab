@@ -19,6 +19,8 @@ public static void main(String[] args) {
 
     contacts.remove(2);
 
+    System.out.println("Number of contacts: " + contacts.size());
+
     try {
 
         for (String c : contacts) {
