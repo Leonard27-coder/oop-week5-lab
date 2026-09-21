@@ -17,6 +17,8 @@ public static void main(String[] args) {
 
     contacts.set(1, "Jacob - 999");
 
+    contacts.remove(2);
+
     try {
 
         for (String c : contacts) {
