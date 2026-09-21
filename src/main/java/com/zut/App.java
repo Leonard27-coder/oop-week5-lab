@@ -4,22 +4,27 @@ import java.util.ArrayList;
 
 public class App {
 
-    public static void main(String[] args) {
 
-        ArrayList<String> contacts = new ArrayList<>();
+public static void main(String[] args) {
 
-        contacts.add("Mary - 091");
-        contacts.add("Jacob - 092");
-        contacts.add("Ben - 093");
+    ArrayList<String> contacts = new ArrayList<>();
 
-        try {
+    contacts.add("Mary - 091");
+    contacts.add("Jacob - 092");
+    contacts.add("Ben - 093");
 
-            for (String c : contacts) {
-                System.out.println(c);
-            }
+    System.out.println("First contact: " + contacts.get(0));
 
-        } catch (ArrayIndexOutOfBoundsException e) {
-            System.out.println("Problem in array: " + e.getMessage());
+    try {
+
+        for (String c : contacts) {
+            System.out.println(c);
         }
+
+    } catch (ArrayIndexOutOfBoundsException e) {
+        System.out.println("Problem in array: " + e.getMessage());
     }
+}
+
+
 }
