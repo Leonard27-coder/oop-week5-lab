@@ -1,9 +1,9 @@
 package com.zut;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.HashSet;
 import java.util.Set;
 
 public class App {
@@ -13,9 +13,7 @@ public static void main(String[] args) {
 
     try {
 
-        // ==========================================
         // PART 2 - ARRAYLIST
-        // ==========================================
 
         List<String> contacts = new ArrayList<>();
 
@@ -33,13 +31,11 @@ public static void main(String[] args) {
 
         System.out.println("Number of contacts: " + contacts.size());
 
-        System.out.println(
-            "Mary exists: " + contacts.contains("Mary - 091")
-        );
+        System.out.println("Mary exists: "
+                + contacts.contains("Mary - 091"));
 
-        System.out.println(
-            "Ben exists: " + contacts.contains("Ben - 093")
-        );
+        System.out.println("Ben exists: "
+                + contacts.contains("Ben - 093"));
 
         System.out.println("After ArrayList operations:");
 
@@ -48,9 +44,7 @@ public static void main(String[] args) {
         }
 
 
-        // ==========================================
         // PART 3 - LINKEDLIST
-        // ==========================================
 
         List<String> queue = new LinkedList<>();
 
@@ -58,30 +52,28 @@ public static void main(String[] args) {
         queue.add("Ticket 3");
 
         System.out.println();
+
         System.out.println("Ticket queue: " + queue);
+
         System.out.println("Queue size: " + queue.size());
 
         queue.add(1, "Ticket 2");
 
         System.out.println(
-            "After inserting Ticket 2: " + queue
+                "After inserting Ticket 2: " + queue
         );
 
 
-        // ==========================================
         // ARRAYLIST MIDDLE INSERT
-        // ==========================================
 
         contacts.add(1, "Alex - 097");
 
         System.out.println(
-            "After inserting Alex: " + contacts
+                "After inserting Alex: " + contacts
         );
 
 
-        // ==========================================
         // PART 4 - HASHSET
-        // ==========================================
 
         List<String> numbers = new ArrayList<>();
 
@@ -90,14 +82,13 @@ public static void main(String[] args) {
         numbers.add("097");
 
         System.out.println();
+
         System.out.println(
-            "ArrayList numbers: " + numbers
+                "ArrayList numbers: " + numbers
         );
 
 
-        // ==========================================
         // HASHSET - REMOVE DUPLICATES
-        // ==========================================
 
         Set<String> numbers2 = new HashSet<>();
 
@@ -106,13 +97,31 @@ public static void main(String[] args) {
         numbers2.add("097");
 
         System.out.println(
-            "HashSet numbers: " + numbers2
+                "HashSet numbers: " + numbers2
+        );
+
+
+        // HASHSET WITH CONTACT OBJECTS
+
+        Set<Contact> uniqueContacts = new HashSet<>();
+
+        uniqueContacts.add(
+                new Contact("Jacob", "091")
+        );
+
+        uniqueContacts.add(
+                new Contact("Jacob", "091")
+        );
+
+        System.out.println(
+                "Unique contacts: "
+                + uniqueContacts.size()
         );
 
     } catch (ArrayIndexOutOfBoundsException e) {
 
         System.out.println(
-            "Problem in array: " + e.getMessage()
+                "Problem in array: " + e.getMessage()
         );
     }
 }
