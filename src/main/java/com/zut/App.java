@@ -15,6 +15,8 @@ public static void main(String[] args) {
 
     System.out.println("First contact: " + contacts.get(0));
 
+    contacts.set(1, "Jacob - 999");
+
     try {
 
         for (String c : contacts) {
