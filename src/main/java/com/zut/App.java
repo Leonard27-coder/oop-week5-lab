@@ -1,21 +1,18 @@
 package com.zut;
 
+import java.util.ArrayList;
+
 public class App {
 
     public static void main(String[] args) {
 
+        ArrayList<String> contacts = new ArrayList<>();
+
+        contacts.add("Mary - 091");
+        contacts.add("Jacob - 092");
+        contacts.add("Ben - 093");
+
         try {
-            String[] contact = new String[1];
-            contact[0] = "Mary - 091";
-
-            int contactArrayLength = contact.length;
-
-            String[] contacts = new String[contactArrayLength + 2];
-
-            System.arraycopy(contact, 0, contacts, 0, contactArrayLength);
-
-            contacts[1] = "Jacob - 092";
-            contacts[2] = "Ben - 093";
 
             for (String c : contacts) {
                 System.out.println(c);
