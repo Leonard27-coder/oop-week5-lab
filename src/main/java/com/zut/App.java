@@ -3,6 +3,8 @@ package com.zut;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 public class App {
 
@@ -59,7 +61,6 @@ public static void main(String[] args) {
         System.out.println("Ticket queue: " + queue);
         System.out.println("Queue size: " + queue.size());
 
-        // Insert Ticket 2 in the middle
         queue.add(1, "Ticket 2");
 
         System.out.println(
@@ -75,6 +76,37 @@ public static void main(String[] args) {
 
         System.out.println(
             "After inserting Alex: " + contacts
+        );
+
+
+        // ==========================================
+        // PART 4 - HASHSET
+        // ==========================================
+
+        List<String> numbers = new ArrayList<>();
+
+        numbers.add("097");
+        numbers.add("096");
+        numbers.add("097");
+
+        System.out.println();
+        System.out.println(
+            "ArrayList numbers: " + numbers
+        );
+
+
+        // ==========================================
+        // HASHSET - REMOVE DUPLICATES
+        // ==========================================
+
+        Set<String> numbers2 = new HashSet<>();
+
+        numbers2.add("097");
+        numbers2.add("096");
+        numbers2.add("097");
+
+        System.out.println(
+            "HashSet numbers: " + numbers2
         );
 
     } catch (ArrayIndexOutOfBoundsException e) {
