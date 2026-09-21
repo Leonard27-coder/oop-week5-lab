@@ -1,10 +1,12 @@
 package com.zut;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -150,6 +152,60 @@ public static void main(String[] args) {
         System.out.println(
                 "TreeSet numbers: " + numbers3
         );
+
+
+        // PART 6 - HASHMAP
+
+        Map<String, Contact> phoneBook = new HashMap<>();
+
+        phoneBook.put(
+                "097",
+                new Contact("Jacob", "097")
+        );
+
+        phoneBook.put(
+                "096",
+                new Contact("Mary", "096")
+        );
+
+        System.out.println();
+
+        System.out.println(
+                "Phone book: " + phoneBook
+        );
+
+
+        // RETRIEVE CONTACT USING PHONE NUMBER
+
+        Contact found = phoneBook.get("097");
+
+        System.out.println(
+                "Found contact: " + found.getName()
+        );
+
+
+        // CHECK A MISSING KEY
+
+        Contact missing = phoneBook.get("095");
+
+        System.out.println(
+                "Missing contact: " + missing
+        );
+
+
+        // ITERATE THROUGH HASHMAP
+
+        System.out.println("Phone book entries:");
+
+        for (Map.Entry<String, Contact> entry
+                : phoneBook.entrySet()) {
+
+            System.out.println(
+                    entry.getKey()
+                    + " -> "
+                    + entry.getValue().getName()
+            );
+        }
 
     } catch (ArrayIndexOutOfBoundsException e) {
 
