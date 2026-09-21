@@ -21,6 +21,11 @@ public static void main(String[] args) {
 
     System.out.println("Number of contacts: " + contacts.size());
 
+    System.out.println("Number of contacts: " + contacts.size());
+
+System.out.println("Mary exists: " + contacts.contains("Mary - 091"));
+System.out.println("Ben exists: " + contacts.contains("Ben - 093"));
+
     try {
 
         for (String c : contacts) {
