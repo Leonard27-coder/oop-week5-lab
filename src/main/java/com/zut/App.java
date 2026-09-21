@@ -2,9 +2,11 @@ package com.zut;
 
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
+import java.util.TreeSet;
 
 public class App {
 
@@ -31,11 +33,13 @@ public static void main(String[] args) {
 
         System.out.println("Number of contacts: " + contacts.size());
 
-        System.out.println("Mary exists: "
-                + contacts.contains("Mary - 091"));
+        System.out.println(
+                "Mary exists: " + contacts.contains("Mary - 091")
+        );
 
-        System.out.println("Ben exists: "
-                + contacts.contains("Ben - 093"));
+        System.out.println(
+                "Ben exists: " + contacts.contains("Ben - 093")
+        );
 
         System.out.println("After ArrayList operations:");
 
@@ -114,8 +118,37 @@ public static void main(String[] args) {
         );
 
         System.out.println(
-                "Unique contacts: "
-                + uniqueContacts.size()
+                "Unique contacts: " + uniqueContacts.size()
+        );
+
+
+        // PART 5 - LINKEDHASHSET
+
+        Set<String> names = new LinkedHashSet<>();
+
+        names.add("Shakil");
+        names.add("Chanda");
+        names.add("Ben");
+        names.add("Jacob");
+
+        System.out.println();
+
+        System.out.println(
+                "LinkedHashSet names: " + names
+        );
+
+
+        // PART 5 - TREESET
+
+        Set<Integer> numbers3 = new TreeSet<>();
+
+        numbers3.add(100);
+        numbers3.add(50);
+        numbers3.add(1);
+        numbers3.add(-10);
+
+        System.out.println(
+                "TreeSet numbers: " + numbers3
         );
 
     } catch (ArrayIndexOutOfBoundsException e) {
